@@ -1,0 +1,24 @@
+diff --git a/app/AppKernel.php b/app/AppKernel.php
+index c5c9eb6..c35b166 100644
+--- a/app/AppKernel.php
++++ b/app/AppKernel.php
+@@ -19,7 +19,6 @@ class AppKernel extends Kernel
+         );
+ 
+         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+-            $bundles[] = new Acme\DemoBundle\AcmeDemoBundle();
+             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
+             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+diff --git a/app/config/routing_dev.yml b/app/config/routing_dev.yml
+index c45f361..ff93a02 100644
+--- a/app/config/routing_dev.yml
++++ b/app/config/routing_dev.yml
+@@ -12,7 +12,3 @@ _configurator:
+ 
+ _main:
+     resource: routing.yml
+-
+-# AcmeDemoBundle routes (to be removed)
+-_acme_demo:
+-    resource: "@AcmeDemoBundle/Resources/config/routing.yml"
